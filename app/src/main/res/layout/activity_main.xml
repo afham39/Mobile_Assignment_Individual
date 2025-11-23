@@ -13,13 +13,14 @@
         android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/alatsi"
         android:text="Loan Calculator"
         android:textColor="@color/loan_blue"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/eVehiclePrice"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -28,11 +29,12 @@
         android:id="@+id/eVehiclePrice"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:background="#FFFFFF"
-        android:paddingStart="16dp"
+        android:fontFamily="@font/alatsi"
         android:hint="Vehicle Price (RM)"
         android:inputType="numberDecimal"
-        android:layout_marginTop="24dp"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
@@ -41,11 +43,12 @@
         android:id="@+id/eDownPayment"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="12dp"
         android:background="#FFFFFF"
-        android:paddingStart="16dp"
+        android:fontFamily="@font/alatsi"
         android:hint="Down Payment (RM)"
         android:inputType="numberDecimal"
-        android:layout_marginTop="12dp"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eVehiclePrice" />
@@ -54,11 +57,12 @@
         android:id="@+id/eLoanPeriod"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="12dp"
         android:background="#FFFFFF"
-        android:paddingStart="16dp"
+        android:fontFamily="@font/alatsi"
         android:hint="Loan Period (Years)"
         android:inputType="numberDecimal"
-        android:layout_marginTop="12dp"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eDownPayment" />
@@ -67,11 +71,12 @@
         android:id="@+id/eInterestRate"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="12dp"
         android:background="#FFFFFF"
-        android:paddingStart="16dp"
+        android:fontFamily="@font/alatsi"
         android:hint="Interest Rate (%)"
         android:inputType="numberDecimal"
-        android:layout_marginTop="12dp"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eLoanPeriod" />
@@ -81,6 +86,7 @@
         android:layout_width="207dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/alatsi"
         android:text="CALCULATE PAYMENT"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -110,25 +116,28 @@
                 android:id="@+id/txtLoanAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/alatsi"
                 android:text="Loan Amount: RM 0.00"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/txtTotalInterest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/alatsi"
                 android:text="Total Interest: RM 0.00"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/txtTotalPayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/alatsi"
                 android:text="Total Payment: RM 0.00"
-                android:textSize="14sp"
-                android:layout_marginBottom="12dp"/>
+                android:textSize="14sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -147,10 +156,11 @@
                 android:id="@+id/txtMonthlyPayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/alatsi"
                 android:text="RM 0.00"
+                android:textColor="@color/loan_blue"
                 android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="@color/loan_blue"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 

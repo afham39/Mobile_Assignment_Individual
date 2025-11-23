@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.IndividualAssigment_Afham" parent="Theme.Material3.DayNight">
+
+        <item name="colorPrimary">@color/loan_blue</item>
+        <item name="colorPrimaryVariant">@color/loan_blue_dark</item>
+        <item name="colorPrimaryContainer">@color/loan_blue_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item> <item name="actionBarStyle">@style/MyColoredActionBar</item>
+        <item name="android:statusBarColor">@color/loan_blue_dark</item>
+
+        <item name="android:actionBarStyle">@style/Widget.AppCompat.ActionBar.Solid</item>
+        <item name="actionMenuTextColor">#FFFFFF</item>
+    </style>
+
+    <style name="MyColoredActionBar" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">@color/loan_blue</item> <item name="titleTextStyle">@style/MyTitleText</item> <item name="actionMenuTextColor">#FFFFFF</item> </style>
+
+    <style name="MyTitleText" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+    <style name="Theme.IndividualAssigment_Afham" parent="Base.Theme.IndividualAssigment_Afham" />
+</resources>

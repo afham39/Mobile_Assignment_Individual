@@ -83,8 +83,8 @@
 
     <Button
         android:id="@+id/btnCalculate"
-        android:layout_width="207dp"
-        android:layout_height="63dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/alatsi"
         android:text="CALCULATE PAYMENT"
@@ -94,17 +94,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eInterestRate" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReset"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/alatsi"
+        android:text="RESET"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardResults"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        app:cardBackgroundColor="#FFFFFF"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/btnReset">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -142,15 +155,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#EEEEEE"
-                android:layout_marginBottom="12dp"/>
-
-            <!--<TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Monthly Payment"
-                android:textSize="12sp"
-                android:textColor="#888888"/>-->
+                android:layout_marginBottom="12dp"
+                android:background="#EEEEEE" />
 
             <TextView
                 android:id="@+id/txtMonthlyPayment"

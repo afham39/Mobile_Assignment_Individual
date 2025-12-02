@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -23,15 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
     EditText eVehiclePrice, eLoanPeriod, eDownPayment, eInterestRate;
     TextView txtLoanAmount, txtTotalInterest, txtTotalPayment, txtMonthlyPayment;
-    Button btnCalculate;
+    Button btnCalculate, btnReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-
 
         eVehiclePrice = findViewById(R.id.eVehiclePrice);
         eLoanPeriod = findViewById(R.id.eLoanPeriod);
@@ -44,19 +41,21 @@ public class MainActivity extends AppCompatActivity {
         txtMonthlyPayment = findViewById(R.id.txtMonthlyPayment);
 
         btnCalculate = findViewById(R.id.btnCalculate);
-
+        btnReset = findViewById(R.id.btnReset);
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calculateLoan();
             }
-
-
         });
 
-
-
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetCalculator();
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -64,6 +63,18 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+    }
+
+    private void resetCalculator() {
+        eVehiclePrice.setText("");
+        eDownPayment.setText("");
+        eLoanPeriod.setText("");
+        eInterestRate.setText("");
+
+        txtLoanAmount.setText("Loan Amount: RM 0.00");
+        txtTotalInterest.setText("Total Interest: RM 0.00");
+        txtTotalPayment.setText("Total Payment: RM 0.00");
+        txtMonthlyPayment.setText("RM 0.00");
     }
 
     // 1. This method puts the menu on the screen
@@ -126,6 +137,6 @@ public class MainActivity extends AppCompatActivity {
         txtLoanAmount.setText("Loan Amount: RM " + df.format(loanAmount));
         txtTotalInterest.setText("Total Interest: RM " + df.format(totalInterest));
         txtTotalPayment.setText("Total Payment: RM " + df.format(totalPayment));
-        txtMonthlyPayment.setText("Monthly Payment: RM" + df.format(monthlyPayment));
+        txtMonthlyPayment.setText("Monthly Payment: RM " + df.format(monthlyPayment));
     }
 }

@@ -45,7 +45,6 @@ public class AboutActivity extends AppCompatActivity {
             return true;
         }
         else if (id == R.id.nav_about) {
-            // We are already on About, do nothing
             return true;
         }
 

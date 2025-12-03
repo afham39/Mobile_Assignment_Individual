@@ -84,13 +84,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // 2. This method handles what happens when you click a button
+    // 2. This method handles what happens when user click a button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // We are already on Home, so we do nothing or just show a message
             return true;
         }
         else if (id == R.id.nav_about) {
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         if (eVehiclePrice.getText().toString().isEmpty() || eDownPayment.getText().toString().isEmpty() || eLoanPeriod.getText().toString().isEmpty() || eInterestRate.getText().toString().isEmpty()) {
             // Show a Toast message to the user: "Please fill in all fields."
             Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_SHORT).show();
-            return; // Stop the calculation
+            return;
         }
 
         // 2. **Get and Convert Inputs:** Convert the text input to double-precision numbers.
